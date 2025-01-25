@@ -52,7 +52,7 @@ export const ProductGrid = () => {
   const router = useRouter(); 
 
   const handleClick = (product) => {
-    router.push(`/robots/${product.slug}`);
+    router.push(`/all-errorbots/${product.slug}`);
   };
 
   return (
