@@ -63,7 +63,7 @@ export const ProductGrid = () => {
           <Card key={product.id} className="flex flex-col h-full relative group border border-transparent hover:border-red-500 hover:border-4 transition-all">
             <CardContent className="p-4 flex flex-col h-full">
               <div className="relative w-full pb-[100%]">
-                <a onClick={() => handleClick(product)}>
+                <a onClick={() => handleClick(product)} className="cursor-pointer">
 
                 
                 <Image
