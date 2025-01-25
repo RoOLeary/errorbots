@@ -59,7 +59,7 @@ export const FilterGrid = () => {
       <div className="flex flex-col gap-4 md:flex-row mb-8 sm:w-[50%]">
         {/* Search Input */}
         <Input
-          placeholder="Search products..."
+          placeholder="Search ErrorBots..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="flex-1 min-h-10"
