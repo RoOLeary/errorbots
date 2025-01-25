@@ -2,7 +2,7 @@ const navigation = {
     main: [
       { name: 'All ErrorBots', href: '/all-errorbots' },
       { name: 'Contact', href: '/contact' },
-      { name: 'Privacy, T&Cs', href: '/privacy-and-terms' },
+      { name: 'Privacy, T&Cs', href: '/policies' },
     ],
     social: [
       
