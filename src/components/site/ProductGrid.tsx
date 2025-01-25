@@ -23,7 +23,7 @@ const products: Product[] = Array.from({ length: 24 }, (_, i) => ({
 
 export const ProductGrid = () => {
   return (
-    <div className="w-full mx-auto py-8 px-8">
+    <div className="w-full mx-auto py-8 px-8 max-sm:p-1">
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
