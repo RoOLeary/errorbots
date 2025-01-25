@@ -61,7 +61,7 @@ export const ProductGrid = ({ data }: ProductGridProps) => {
                 </Link>
               </div>
               <div className="mt-4 flex-grow">
-                <h3 className="text-lg font-semibold truncate">{product.name}</h3>
+                <h3 className="text-lg font-semibold truncate">{product?.title.rendered}</h3>
               </div>
             </CardContent>
           </Card>
