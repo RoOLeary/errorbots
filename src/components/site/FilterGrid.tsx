@@ -17,7 +17,7 @@ interface Product {
 }
 
 const products: Product[] = [
-    { id: 1, slug: "ramon", name: "Ramón", price: 19.99, image: "/assets/images/errorbot-1.webp", category: 'Not found' },
+    { id: 1, slug: "ramon", name: "Ramon", price: 19.99, image: "/assets/images/errorbot-1.webp", category: 'Not found' },
     { id: 2, slug: "miguel", name: "Miguel", price: 29.99, image: "/assets/images/errorbot-2.webp", category: 'Disconnected'},
     { id: 3, slug: "leonard", name: "Leonard", price: 39.99, image: "/assets/images/errorbot-3.webp", category: 'Fuego' },
     { id: 4, slug: "alfredo", name: "Alfredo", price: 49.99, image: "/assets/images/errorbot-4.webp", category: 'Not Found'},
