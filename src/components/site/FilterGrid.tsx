@@ -16,7 +16,7 @@ interface Product {
   image: string;
 }
 
-const products = [
+const products: Product[] = [
     { id: 1, slug: "errorbot-1", name: "Ramón", price: 19.99, image: "/assets/images/errorbot-1.webp", category: 'Not found' },
     { id: 2, slug: "errorbot-2", name: "Miguel", price: 29.99, image: "/assets/images/errorbot-2.webp", category: 'Disconnected'},
     { id: 3, slug: "errorbot-3", name: "Leonard", price: 39.99, image: "/assets/images/errorbot-3.webp", category: 'Fuego' },

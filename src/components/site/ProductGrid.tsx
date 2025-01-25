@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { Link } from "next-view-transitions";
 import { useRouter } from 'next/navigation'; // For extracting params dynamically
 
 interface Product {
@@ -21,7 +20,7 @@ interface Product {
 //   image: `/assets/images/errorbot-${i + 1}.webp`,
 // }))
 
-const products = [
+const products: Product[] = [
   { id: 1, slug: "errorbot-1", name: "Ramón", price: 19.99, image: "/assets/images/errorbot-1.webp" },
   { id: 2, slug: "errorbot-2", name: "Miguel", price: 29.99, image: "/assets/images/errorbot-2.webp" },
   { id: 3, slug: "errorbot-3", name: "Leonard", price: 39.99, image: "/assets/images/errorbot-3.webp" },
@@ -53,9 +52,7 @@ export const ProductGrid = () => {
   const router = useRouter(); 
 
   const handleClick = (product) => {
-    router.push(`/robots/${product.slug}`, {
-      state: product, // Pass the product object as state
-    });
+    router.push(`/robots/${product.slug}`);
   };
 
   return (

@@ -1,8 +1,5 @@
-"use client"; 
-
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { useRouter } from 'next/navigation';
 
 type tParams = Promise<{ slug: string[] }>;
 
@@ -10,7 +7,6 @@ export default async function Page(props: { params: tParams }) {
   // Await `params` if it is being treated as asynchronous
   const { slug } = await props.params;
 
-  console.log('robot',  `ErrorBot ${slug}`);
 
   const product = {
     name: `ErrorBot ${slug}`,
