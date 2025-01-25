@@ -83,10 +83,10 @@ export const FilterGrid = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-8">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
-            <Card key={product.id} className="flex flex-col h-full">
+            <Card key={product.id} className="flex flex-col h-full relative group border border-transparent hover:border-red-500 hover:border-4 transition-all">
               <CardContent className="p-4 flex flex-col h-full">
                 <div className="relative w-full pb-[100%]">
                   <Link href={`/all-errorbots/${product.slug}`}>
