@@ -1,10 +1,8 @@
 const navigation = {
     main: [
-      { name: 'About', href: '#' },
-      { name: 'Blog', href: '#' },
-      { name: 'Contact', href: '#' },
-      { name: 'Accessibility', href: '#' },
-      { name: 'Privacy, T&Cs', href: '#' },
+      { name: 'All ErrorBots', href: '/all-errorbots' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Privacy, T&Cs', href: '/privacy-and-terms' },
     ],
     social: [
       
