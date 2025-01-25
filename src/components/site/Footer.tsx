@@ -71,6 +71,7 @@ const navigation = {
             ))}
           </div>
           <p className="mt-10 text-center text-sm/6 text-gray-400">&copy; 2025 Errorbots Apparrel and Accessories, Inc. All rights reserved.</p>
+          <p className="text-center text-sm/6 text-white">Made for the giggles by <a href="https://busylittlepixels.com">Busy<span className="text-red-500">Little</span>Pixels</a></p>
         </div>
       </footer>
     )

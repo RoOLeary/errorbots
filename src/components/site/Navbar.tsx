@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 const navItems = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
-  { name: "About", href: "/about" },
+  { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },
 ]
 
@@ -32,10 +32,10 @@ export const Navbar =() => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition-all duration-150 ${
                     pathname === item.href
-                      ? "border-primary text-primary"
-                      : "border-transparent text-muted-foreground hover:border-gray-300 hover:text-foreground"
+                      ? "border-primary text-primary text-red-500 border-red-500"
+                      : "border-transparent text-muted-foreground hover:border-gray-300 hover:text-red-500"
                   }`}
                 >
                   {item.name}
@@ -44,8 +44,8 @@ export const Navbar =() => {
             </div>
           </div>
           <div className="hidden sm:ml-6 sm:flex sm:items-center gap-2">
-            <Button>Sign in</Button>
-            <Button>Register</Button>
+            <Button className="hover:bg-red-500">Sign in</Button>
+            <Button className="hover:bg-red-500">Register</Button>
           </div>
           <div className="-mr-2 flex items-center sm:hidden">
             <Button
