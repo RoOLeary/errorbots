@@ -35,7 +35,7 @@ const products: Product[] = [
     { id: 16, slug: "errorbot-16", name: "Phillipé", price: 169.99, image: "/assets/images/errorbot-16.webp", category: 'Fuego'},
     { id: 17, slug: "errorbot-17", name: "Darina", price: 179.99, image: "/assets/images/errorbot-17.webp", category: 'Fuego'},
     { id: 18, slug: "errorbot-18", name: "Dorothy", price: 189.99, image: "/assets/images/errorbot-18.webp", category: 'Not Found' },
-    { id: 19, slug: "errorbot-19", name: "Montague", price: 199.99, image: "/assets/images/errorbot-19.webp",category: 'Disconnected' },
+    { id: 19, slug: "errorbot-19", name: "Montgomery", price: 199.99, image: "/assets/images/errorbot-19.webp",category: 'Disconnected' },
     { id: 20, slug: "errorbot-20", name: "Urusla", price: 209.99, image: "/assets/images/errorbot-20.webp", category: 'Disconnected' },
     { id: 21, slug: "errorbot-21", name: "Clyde", price: 219.99, image: "/assets/images/errorbot-21.webp", category: 'Not Found' },
     { id: 22, slug: "errorbot-22", name: "Pascále", price: 229.99, image: "/assets/images/errorbot-22.webp", category: 'Disconnected' },
