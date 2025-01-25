@@ -36,7 +36,7 @@ export const FilterGrid = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 pb-8">
+    <div className="w-full mx-auto py-8 px-8">
       {/* Filter Controls */}
       <div className="flex flex-col md:flex-row gap-4 mb-8 sm:w-[50%]">
         {/* Search Input */}
