@@ -16,7 +16,7 @@ export default async function Page(props: { params: tParams }) {
   return (
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start h-full">
       <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row gap-8 w-full max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row gap-8 w-full mx-auto">
           <div className="w-full md:w-1/2">
             <div className="relative aspect-square">
               <Image
