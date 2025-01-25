@@ -19,7 +19,7 @@ export const Navbar =() => {
 
   return (
     <nav className="bg-background shadow-sm">
-      <div className="w-full mx-auto px-16 max-sm:px-4 lg:px-8">
+      <div className="w-full mx-auto px-8 max-sm:px-4 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
