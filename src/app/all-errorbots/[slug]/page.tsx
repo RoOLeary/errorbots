@@ -8,7 +8,14 @@ export default async function Page(props: { params: tParams }) {
   // Await `params` if it is being treated as asynchronous
   const { slug } = await props.params;
 
-
+  interface Product {
+    id: number
+    slug: string
+    name: string
+    price: number
+    image: string
+  }
+  
   const product = {
     name: `ErrorBot ${slug}`,
     image: `/assets/images/${slug}.webp`,
