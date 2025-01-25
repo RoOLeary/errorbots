@@ -70,7 +70,7 @@ export const FilterGrid = () => {
             <Card key={product.id} className="flex flex-col h-full">
               <CardContent className="p-4 flex flex-col h-full">
                 <div className="relative w-full pb-[100%]">
-                  <Link href={`/robots/${product.slug}`} id={product.id}>
+                  <Link href={`/robots/${product.slug}`}>
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.name}

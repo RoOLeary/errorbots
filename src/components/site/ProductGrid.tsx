@@ -1,10 +1,9 @@
 "use client"; 
 
 import Image from "next/image"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 import { Link } from "next-view-transitions";
-import { useRouter } from 'next/navigation'; // For extracting params dynamically
+// import { useRouter } from 'next/navigation'; // For extracting params dynamically
 
 interface Product {
   id: number
@@ -27,11 +26,11 @@ export const ProductGrid = () => {
     <div className="container mx-auto py-8">
 
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {products.map((product, idx) => (
+        {products.map((product) => (
           <Card key={product.id} className="flex flex-col h-full relative group border border-transparent hover:border-red-500 hover:border-4 transition-all">
             <CardContent className="p-4 flex flex-col h-full">
               <div className="relative w-full pb-[100%]">
-                <Link href={`/robots/${product.slug}`} id={product.id}>
+                <Link href={`/robots/${product.slug}`}>
 
                 
                 <Image

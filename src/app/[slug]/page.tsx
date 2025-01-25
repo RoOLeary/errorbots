@@ -1,6 +1,4 @@
-import Image from "next/image";
 import FilterGrid from "@/components/site/FilterGrid";
-import Navbar from "@/components/site/Navbar";
 
 export default function Page() {
   return (

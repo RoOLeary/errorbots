@@ -26,7 +26,7 @@ export default function RootLayout({
     <ViewTransitions>
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${pressStart} antialiased`}
       >
         <div className="bg-black h-10 w-full mx-auto flex items-center justify-center">
           <div className="text-white text-center p-4 text-xs md:text-md flex items-center gap-2"><Bot size={20} /><small className="text-xs"> Robots are forever, not just for life</small></div>
