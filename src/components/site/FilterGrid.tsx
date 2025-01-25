@@ -16,14 +16,32 @@ interface Product {
   image: string;
 }
 
-const products: Product[] = Array.from({ length: 24 }, (_, i) => ({
-  id: i + 1,
-  slug: `errorbot-${i + 1}`,
-  name: `ErrorBot ${i + 1}`,
-  price: 19.99 + i * 10,
-  category: i % 2 === 0 ? "Advanced" : "Basic", // Example categories
-  image: `/assets/images/errorbot-${i + 1}.webp`,
-}));
+const products = [
+    { id: 1, slug: "errorbot-1", name: "Ramón", price: 19.99, image: "/assets/images/errorbot-1.webp", category: 'Not found' },
+    { id: 2, slug: "errorbot-2", name: "Miguel", price: 29.99, image: "/assets/images/errorbot-2.webp", category: 'Disconnected'},
+    { id: 3, slug: "errorbot-3", name: "Leonard", price: 39.99, image: "/assets/images/errorbot-3.webp", category: 'Fuego' },
+    { id: 4, slug: "errorbot-4", name: "Alfonse", price: 49.99, image: "/assets/images/errorbot-4.webp", category: 'Not Found'},
+    { id: 5, slug: "errorbot-5", name: "Mabel", price: 59.99, image: "/assets/images/errorbot-5.webp", category: 'Not Found' },
+    { id: 6, slug: "errorbot-6", name: "Irving", price: 69.99, image: "/assets/images/errorbot-6.webp", category: 'Disconnected'},
+    { id: 7, slug: "errorbot-7", name: "Elton", price: 79.99, image: "/assets/images/errorbot-7.webp", category: 'Disconnected' },
+    { id: 8, slug: "errorbot-8", name: "Beatrice", price: 89.99, image: "/assets/images/errorbot-8.webp", category: 'Fuego'},
+    { id: 9, slug: "errorbot-9", name: "Margot", price: 99.99, image: "/assets/images/errorbot-9.webp", category: 'Disconnected'},
+    { id: 10, slug: "errorbot-10", name: "Javier", price: 109.99, image: "/assets/images/errorbot-10.webp", category: 'Fuego'},
+    { id: 11, slug: "errorbot-11", name: "Clarence", price: 119.99, image: "/assets/images/errorbot-11.webp", category: 'Not Found' },
+    { id: 12, slug: "errorbot-12", name: "George", price: 129.99, image: "/assets/images/errorbot-12.webp", category: 'Not Found'},
+    { id: 13, slug: "errorbot-13", name: "Claude", price: 139.99, image: "/assets/images/errorbot-13.webp", category: 'Disconnected'},
+    { id: 14, slug: "errorbot-14", name: "Dottie", price: 149.99, image: "/assets/images/errorbot-14.webp", category: 'Disconnected'},
+    { id: 15, slug: "errorbot-15", name: "Francisco", price: 159.99, image: "/assets/images/errorbot-15.webp", category: 'Not Found' },
+    { id: 16, slug: "errorbot-16", name: "Phillipé", price: 169.99, image: "/assets/images/errorbot-16.webp", category: 'Fuego'},
+    { id: 17, slug: "errorbot-17", name: "Darina", price: 179.99, image: "/assets/images/errorbot-17.webp", category: 'Fuego'},
+    { id: 18, slug: "errorbot-18", name: "Dorothy", price: 189.99, image: "/assets/images/errorbot-18.webp", category: 'Not Found' },
+    { id: 19, slug: "errorbot-19", name: "Montague", price: 199.99, image: "/assets/images/errorbot-19.webp",category: 'Disconnected' },
+    { id: 20, slug: "errorbot-20", name: "Urusla", price: 209.99, image: "/assets/images/errorbot-20.webp", category: 'Disconnected' },
+    { id: 21, slug: "errorbot-21", name: "Clyde", price: 219.99, image: "/assets/images/errorbot-21.webp", category: 'Not Found' },
+    { id: 22, slug: "errorbot-22", name: "Pascale", price: 229.99, image: "/assets/images/errorbot-22.webp", category: 'Disconnected' },
+    { id: 23, slug: "errorbot-23", name: "Delphine", price: 239.99, image: "/assets/images/errorbot-23.webp", category: 'Disconnected' },
+    { id: 24, slug: "errorbot-24", name: "Solo", price: 249.99, image: "/assets/images/errorbot-24.webp", category: 'Fuego'},
+  ];
 
 export const FilterGrid = () => {
   const [search, setSearch] = useState("");
@@ -36,15 +54,15 @@ export const FilterGrid = () => {
   });
 
   return (
-    <div className="w-full mx-auto py-8 px-8 max-sm:p-1">
+    <div className="w-full mx-auto pb-8 px-8 max-sm:p-1">
       {/* Filter Controls */}
-      <div className="flex flex-col md:flex-row gap-4 mb-8 sm:w-[50%]">
+      <div className="flex flex-col gap-4 md:flex-row mb-8 sm:w-[50%]">
         {/* Search Input */}
         <Input
           placeholder="Search products..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="flex-1"
+          className="flex-1 min-h-10"
         />
 
         {/* Category Filter */}
@@ -57,8 +75,9 @@ export const FilterGrid = () => {
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="all">All Errorbots</SelectItem>
-            <SelectItem value="Basic">Basic</SelectItem>
-            <SelectItem value="Advanced">Advanced</SelectItem>
+            <SelectItem value="Not Found">Not Found</SelectItem>
+            <SelectItem value="Disconnected">Disconnected</SelectItem>
+            <SelectItem value="Fuego">FUEGO!!</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -81,7 +100,7 @@ export const FilterGrid = () => {
                 </div>
                 <div className="mt-4 flex-grow">
                   <h3 className="text-lg font-semibold truncate">{product.name}</h3>
-                  <p className="text-gray-500">${product.price.toFixed(2)}</p>
+                  {/* <p className="text-gray-500">${product.price.toFixed(2)}</p> */}
                 </div>
               </CardContent>
             </Card>
