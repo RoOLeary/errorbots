@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
-import { useRouter } from 'next/navigation'; // For extracting params dynamically
+import { Link } from "next-view-transitions";
 
 interface Product {
   id: number
@@ -49,20 +49,6 @@ const products: Product[] = [
 
 
 export const ProductGrid = () => {
-  const router = useRouter(); 
-
-  const handleClick = (product) => {
-    if (document.startViewTransition) {
-      // Use the View Transition API if available
-      document.startViewTransition(() => {
-        router.push(`/all-errorbots/${product.slug}`);
-      });
-    } else {
-      // Fallback if View Transitions API isn't supported
-      router.push(`/all-errorbots/${product.slug}`);
-    }
-  };
-  
 
   return (
     <div className="w-full mx-auto py-8 px-8 max-sm:p-1">
@@ -72,7 +58,7 @@ export const ProductGrid = () => {
           <Card key={product.id} className="flex flex-col h-full relative group border border-transparent hover:border-red-500 hover:border-4 transition-all">
             <CardContent className="p-4 flex flex-col h-full">
               <div className="relative w-full pb-[100%]">
-                <a onClick={() => handleClick(product)} className="cursor-pointer">
+                <Link href={`/all-errorbots/${product.slug}`} className="cursor-pointer">
 
                 
                 <Image
@@ -81,7 +67,7 @@ export const ProductGrid = () => {
                   fill
                   className="object-cover rounded-md"
                 />
-                </a>
+                </Link>
               </div>
               <div className="mt-4 flex-grow">
                 <h3 className="text-lg font-semibold truncate">{product.name}</h3>
