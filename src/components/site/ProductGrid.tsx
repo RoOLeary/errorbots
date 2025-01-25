@@ -52,8 +52,17 @@ export const ProductGrid = () => {
   const router = useRouter(); 
 
   const handleClick = (product) => {
-    router.push(`/all-errorbots/${product.slug}`);
+    if (document.startViewTransition) {
+      // Use the View Transition API if available
+      document.startViewTransition(() => {
+        router.push(`/all-errorbots/${product.slug}`);
+      });
+    } else {
+      // Fallback if View Transitions API isn't supported
+      router.push(`/all-errorbots/${product.slug}`);
+    }
   };
+  
 
   return (
     <div className="w-full mx-auto py-8 px-8 max-sm:p-1">
