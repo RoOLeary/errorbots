@@ -83,7 +83,7 @@ export const FilterGrid = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 pb-8">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (
             <Card key={product.id} className="flex flex-col h-full">
