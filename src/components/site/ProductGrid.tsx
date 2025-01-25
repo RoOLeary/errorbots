@@ -9,7 +9,9 @@ interface Product {
   id: number;
   slug: string;
   name: string;
-  title?: string;
+  title: {
+    rendered?: string;
+  };
   body: string;
   price?: number;
   image: string;
@@ -25,12 +27,15 @@ const products: Product[] = Array.from({ length: 20 }, (_, i) => ({
   id: i + 4,
   slug: `errorbot-${i + 1}`,
   name: `ErrorBot ${i + 1}`,
+  title: {
+    rendered: `ErrorBot ${i + 1}`, // Add the required title.rendered property
+  },
   body: `ErrorBot ${i + 1} description`,
   price: 19.99 + i * 10,
   image: `/assets/images/errorbot-${i + 1}.webp`,
   acf: {
     image: {
-      filename: `errorbot-${i + 1}.webp`, // Provide a string value, not the `string` type
+      filename: `errorbot-${i + 1}.webp`,
     },
   },
 }));
@@ -62,7 +67,7 @@ export const ProductGrid = ({ data }: ProductGridProps) => {
                 </Link>
               </div>
               <div className="mt-4 flex-grow">
-                <h3 className="text-lg font-semibold truncate">{product?.title.rendered}</h3>
+                <h3 className="text-lg font-semibold truncate">{product?.title?.rendered}</h3>
               </div>
             </CardContent>
           </Card>
