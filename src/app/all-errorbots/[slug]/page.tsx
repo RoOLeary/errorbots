@@ -27,6 +27,11 @@ export default async function Page(props: { params: tParams }) {
     { id: 24, slug: "errorbot-24", name: "Solo", price: 249.99, image: "/assets/images/errorbot-24.webp" },
   ];
 
+
+  const res = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/robots?slug=${slug}&_fields=&acf_format=standard`, { cache: 'no-store' }); // Disable caching for fresh data
+  const data = await res.json();
+
+
   return (
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start h-full">
       <div className="w-full mx-auto py-8 px-8">
@@ -34,8 +39,8 @@ export default async function Page(props: { params: tParams }) {
           <div className="w-full md:w-1/2">
             <div className="relative aspect-square">
               <Image
-                src={product.image || "/placeholder.svg"}
-                alt={product.name}
+                src={`/assets/images/${data[0].acf.image.filename}` || "/placeholder.svg"}
+                alt={data[0]?.title}
                 fill
                 className="object-cover rounded-lg"
               />
@@ -43,10 +48,8 @@ export default async function Page(props: { params: tParams }) {
           </div>
           <div className="w-full md:w-1/2 flex flex-col justify-between">
             <div>
-              <h1 className="text-3xl font-bold mb-4">{product.name}</h1>
-              <p className="text-lg text-gray-600 mb-6">
-                Experience the future of error handling with {product.name}.
-              </p>
+              <h1 className="text-3xl font-bold mb-4 uppercase">{data[0]?.title ? data[0]?.title.rendered : product.name}</h1>
+              <p className="text-sm text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: data[0]?.acf.body }} />
             </div>
             <Button size="lg" className="w-full md:w-auto">
               Add to Cart
