@@ -20,18 +20,6 @@ export default async function Page(props: { params: tParams }) {
     { id: 24, slug: "errorbot-24", name: "Solo", price: 249.99, image: "/assets/images/errorbot-24.webp" },
   ];
 
-  const handleClick = (product) => {
-    if (document.startViewTransition) {
-      // Use the View Transition API if available
-      document.startViewTransition(() => {
-        router.push(`/all-errorbots/${product.slug}`);
-      });
-    } else {
-      // Fallback if View Transitions API isn't supported
-      router.push(`/all-errorbots/${product.slug}`);
-    }
-  };
-
   return (
     <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start h-full">
       <div className="w-full mx-auto py-8 px-8">
