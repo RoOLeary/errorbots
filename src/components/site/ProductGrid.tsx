@@ -77,7 +77,7 @@ export const ProductGrid = ({ data }: ProductGridProps) => {
       {/* Second loop using mock products */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-8">
         {products
-          .slice(4, 24) // Slice the mock data
+          .slice(8, 24) // Slice the mock data
           .map((product) => (
             <Card
               key={product.id}
