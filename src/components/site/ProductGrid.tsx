@@ -47,7 +47,7 @@ interface ProductGridProps {
 
 export const ProductGrid = ({ data }: ProductGridProps) => {
   return (
-    <div className="w-full mx-auto py-8 px-8 max-sm:p-1">
+    <div className="w-full mx-auto pt-4 pb-8 px-8 max-sm:p-1">
       {/* First loop using data prop */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pb-8">
         {data?.map((product) => (
